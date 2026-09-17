@@ -1,38 +1,51 @@
-/* Contenedor principal: organiza las 3 secciones/filas verticalmente */
+/* Contenedor principal: organiza las secciones verticalmente */
 #contenido {
     display: flex;
     flex-direction: column;
 }
 
-/* Filas de productos: organiza los elementos hijos horizontalmente */
+/* Filas de productos: organiza los elementos horizontalmente */
 .contenedor {
     display: flex;
     flex-direction: row;
 }
 
-/* Sección Destacados: 2 columnas al 50% de ancho cada una */
+/* Título de destacados: sombra blanca de texto */
+#destacados h2 {
+    text-shadow: 0 0 3px white;
+}
+
+/* Cajas de destacados: 2 columnas al 50% con sombra de caja avanzada */
 #destacados .contenedor > div {
     text-align: center;
     padding: 10px;
     margin: 10px;
     background-color: white;
     width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(255, 255, 0, 0.3);
 }
 
-/* Sección Ofertas: 3 columnas al 33.3% de ancho cada una */
+/* Título de ofertas: doble sombra de texto */
+#ofertas h2 {
+    text-shadow: 1px 1px 2px white, 0 0 30px #D46A6A;
+}
+
+/* Cajas de ofertas: 3 columnas al 33.3% con sombra de caja simple */
 #ofertas .contenedor > div {
     text-align: center;
     padding: 10px;
     margin: 10px;
     background-color: white;
     width: 33.3%;
+    box-shadow: 4px 8px;
 }
 
-/* Sección Disponibles: 4 columnas al 25% de ancho cada una con borde coral */
+/* Cajas de disponibles: 4 columnas al 25% con borde coral y sombra con color específico */
 #disponible .contenedor > div {
     text-align: center;
     padding: 10px;
     border: solid 5px coral;
     background-color: white;
     width: 25%;
+    box-shadow: 4px 8px #D46A6A;
 }
