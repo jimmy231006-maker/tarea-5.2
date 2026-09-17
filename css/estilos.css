@@ -1,28 +1,38 @@
-body {
-	margin: 20px;
+/* Contenedor principal: organiza las 3 secciones/filas verticalmente */
+#contenido {
+    display: flex;
+    flex-direction: column;
 }
 
-#destacados {
-	background-color: #669999;
+/* Filas de productos: organiza los elementos hijos horizontalmente */
+.contenedor {
+    display: flex;
+    flex-direction: row;
 }
 
-#ofertas {
-	background-color: #F7D988;
+/* Sección Destacados: 2 columnas al 50% de ancho cada una */
+#destacados .contenedor > div {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    width: 50%;
 }
 
-#disponible {
-	background-color: #F7A188;
+/* Sección Ofertas: 3 columnas al 33.3% de ancho cada una */
+#ofertas .contenedor > div {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    width: 33.3%;
 }
 
-#contenido > section > h1 {
-	padding: 10px;
-	text-align: center;
+/* Sección Disponibles: 4 columnas al 25% de ancho cada una con borde coral */
+#disponible .contenedor > div {
+    text-align: center;
+    padding: 10px;
+    border: solid 5px coral;
+    background-color: white;
+    width: 25%;
 }
-
-footer {
-	margin-top: 10px;
-	border-top: solid 1px black;
-	padding-top: 10px;
-	text-align: center;
-}
-
